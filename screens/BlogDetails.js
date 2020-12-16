@@ -16,7 +16,7 @@ class BlogDetails extends Component {
 
         
 
-        <Text>Post id is: {postId}</Text>
+      
 
         <Text>{otherParam}</Text>
 
@@ -24,7 +24,7 @@ class BlogDetails extends Component {
 
         <Button
 
-            title="Go to Blog"
+            title="3번째 화면으로 전환"
 
             onPress={() => {
 

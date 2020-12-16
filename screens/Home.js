@@ -2,44 +2,46 @@ import React, { Component } from 'react';
 
 import { Button, View, Text } from 'react-native';
 
- 
+
 
 class Home extends Component {
 
-  render() {
+    render() {
 
-    return (
+        return (
+            
 
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'blue' }}>
 
-        <Text>Home screen</Text>
+                <Text style={{ color: 'white' }}>LOE</Text>
+                
 
-        <Button
+                <Button
 
-            title="Go to Blog Details"
+                    title="다음 화면으로 버튼 누르기"
 
-            onPress={() => {
+                    onPress={() => {
 
-              this.props.navigation.navigate('BlogDetails', {
+                        this.props.navigation.navigate('BlogDetails', {
 
-                postId: 3006,
+                            postId: 3006,
 
-                otherParam: 'Pass whatever you want here',
+                            otherParam: 'Pass whatever you want here',
 
-              });
+                        });
 
-            }}
+                    }}
 
-          />
+                />
 
-      </View>
+            </View>
 
-    );
+        );
 
-  }
+    }
 
 }
 
- 
+
 
 export default Home;

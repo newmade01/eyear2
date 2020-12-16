@@ -7,9 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
  
 
 import Home from './screens/Home';
-
 import Blog from './screens/Blog';
-
 import BlogDetails from './screens/BlogDetails';
 
  
