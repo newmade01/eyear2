@@ -7,8 +7,8 @@ import { createStackNavigator } from '@react-navigation/stack';
  
 
 import Home from './screens/Home';
-import Blog from './screens/Blog';
-import BlogDetails from './screens/BlogDetails';
+import addVoice from './screens/addVoice';
+import speechToText from './screens/speechToText';
 
  
 
@@ -56,21 +56,21 @@ function NavStack() {
 
       <Stack.Screen 
 
-        name="Blog" 
+        name="addVoice" 
 
-        component={Blog} 
+        component={addVoice} 
 
-        options={{ title: 'Blog' }}
+        options={{ title: 'addVoice' }}
 
       />
 
       <Stack.Screen 
 
-       name="BlogDetails" 
+       name="speechToText" 
 
-       component={BlogDetails} 
+       component={speechToText} 
 
-       options={{ title: 'Blog Detail' }}
+       options={{ title: 'speechToText' }}
 
       />
 

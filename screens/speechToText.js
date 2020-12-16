@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
 import { Button, View, Text } from 'react-native';
 
- 
 
-class Blog extends Component {
+
+class speechToText extends Component {
 
   render() {
 
@@ -12,7 +11,7 @@ class Blog extends Component {
 
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 
-        <Text>Blog screen</Text>
+        <Text>음성에서 텍스트 전환</Text>
 
       </View>
 
@@ -22,6 +21,6 @@ class Blog extends Component {
 
 }
 
- 
 
-export default Blog;
+
+export default speechToText;
