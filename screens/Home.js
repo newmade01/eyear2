@@ -16,7 +16,7 @@ class Home extends Component {
                 <Text style={{ color: 'white' }}>LOE</Text>
                 
 
-                <Button
+                <Button 
 
                     title="다음 화면으로 버튼 누르기"
 
