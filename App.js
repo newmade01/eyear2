@@ -50,7 +50,7 @@ function NavStack() {
 
         component={Home} 
 
-        options={{ title: 'Home' }}
+        options={{ title: '첫화면' }}
 
       />
 
