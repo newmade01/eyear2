@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { Button, View, Text } from 'react-native';
 
 
@@ -64,15 +63,23 @@ class addVoice extends Component {
           </View>
 
           <Button
-            title="speech to text화면으로 전환"
+            title="1.speech to text화면으로 전환 버튼"
             onPress={() => {
               this.props.navigation.navigate('speechToText');
             }}
           />
 
+          <Button
+            title="2.경고음 들리면 진동울리기 화면 버튼"
+            onPress={() => {
+              this.props.navigation.navigate('warningSoundToVib');
+            }}
+          />
+
+
         </View>
 
-       
+
 
       </View>
 

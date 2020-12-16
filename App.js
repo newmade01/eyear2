@@ -4,73 +4,83 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
- 
+
 
 import Home from './screens/Home';
 import addVoice from './screens/addVoice';
 import speechToText from './screens/speechToText';
+import warningSoundToVib from './screens/warningSoundToVib';
 
- 
 
 const Stack = createStackNavigator();
 
- 
+
 
 function NavStack() {
 
   return (
 
-     <Stack.Navigator
+    <Stack.Navigator
 
-        screenOptions={{
+      screenOptions={{
 
-          headerTitleAlign: 'center',
+        headerTitleAlign: 'center',
 
-          headerStyle: {
+        headerStyle: {
 
-            backgroundColor: '#621FF7',
+          backgroundColor: '#621FF7',
 
-          },
+        },
 
-          headerTintColor: '#fff',
+        headerTintColor: '#fff',
 
-          headerTitleStyle :{
+        headerTitleStyle: {
 
-            fontWeight: 'bold',
+          fontWeight: 'bold',
 
-          },
+        },
 
-        }}
+      }}
 
-      >
+    >
 
-      <Stack.Screen 
+      <Stack.Screen
 
-        name="Home" 
+        name="Home"
 
-        component={Home} 
+        component={Home}
 
         options={{ title: '첫화면' }}
 
       />
 
-      <Stack.Screen 
+      <Stack.Screen
 
-        name="addVoice" 
+        name="addVoice"
 
-        component={addVoice} 
+        component={addVoice}
 
         options={{ title: 'addVoice' }}
 
       />
 
-      <Stack.Screen 
+      <Stack.Screen
 
-       name="speechToText" 
+        name="speechToText"
 
-       component={speechToText} 
+        component={speechToText}
 
-       options={{ title: 'speechToText' }}
+        options={{ title: 'speechToText' }}
+
+      />
+
+      <Stack.Screen
+
+        name="warningSoundToVib"
+
+        component={warningSoundToVib}
+
+        options={{ title: 'warningSoundToVib' }}
 
       />
 
@@ -80,7 +90,7 @@ function NavStack() {
 
 }
 
- 
+
 
 export default function App() {
 
@@ -96,4 +106,3 @@ export default function App() {
 
 }
 
- 
