@@ -21,7 +21,7 @@ class warningSoundToVib extends Component {
 
                 <TouchableOpacity onPress={() => Linking.openURL('https://warningsoung-qqbsj.run.goorm.io/warningSoung/index.html')}>
                     <Text style={{ color: 'red' }}>
-                        소리 인식테스트 하기
+                        소리 인식테스트 버튼
                     </Text>
                 </TouchableOpacity>
 

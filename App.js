@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { NavigationContainer } from '@react-navigation/native';
-
 import { createStackNavigator } from '@react-navigation/stack';
 
 
@@ -10,7 +8,8 @@ import Home from './screens/Home';
 import addVoice from './screens/addVoice';
 import speechToText from './screens/speechToText';
 import warningSoundToVib from './screens/warningSoundToVib';
-
+import MicLoading from './screens/MicLoading';
+import AddMic from './screens/AddMic';
 
 const Stack = createStackNavigator();
 
@@ -43,16 +42,42 @@ function NavStack() {
       }}
 
     >
-
       <Stack.Screen
 
         name="Home"
 
         component={Home}
 
-        options={{ title: '첫화면' }}
+        options={{ headerShown: false }}
+
+
 
       />
+
+      <Stack.Screen
+
+        name="MicLoading"
+
+        component={MicLoading}
+
+        options={{ headerShown: false }}
+
+
+
+      />
+
+      <Stack.Screen
+
+        name="AddMic"
+
+        component={AddMic}
+
+        options={{ headerShown: false }}
+
+
+
+      />
+
 
       <Stack.Screen
 
@@ -60,7 +85,7 @@ function NavStack() {
 
         component={addVoice}
 
-        options={{ title: 'addVoice' }}
+        options={{ headerShown: false }}
 
       />
 
@@ -70,7 +95,7 @@ function NavStack() {
 
         component={speechToText}
 
-        options={{ title: 'speechToText' }}
+        options={{ headerShown: false }}
 
       />
 
@@ -80,7 +105,7 @@ function NavStack() {
 
         component={warningSoundToVib}
 
-        options={{ title: 'warningSoundToVib' }}
+        options={{ headerShown: false }}
 
       />
 
