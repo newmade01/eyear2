@@ -1,23 +1,30 @@
 import React, { Component } from 'react';
-import { Button, View, Text } from 'react-native';
+import { Linking, TouchableOpacity, useEffect, WebView, Button, View, Text } from 'react-native';
+
+
 
 
 
 class speechToText extends Component {
 
-  render() {
+    render() {
 
-    return (
-      
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        return (
 
-        <Text>음성에서 텍스트 전환</Text>
-        <Text>transcribe_streaming_mic.py: 실시간 text출력</Text>
-      </View>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 
-    );
+                <Text>speech to text</Text>
+            
+       
 
-  }
+            </View>
+
+
+
+
+        );
+
+    }
 
 }
 
