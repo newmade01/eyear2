@@ -10,6 +10,10 @@ import speechToText from './screens/speechToText';
 import warningSoundToVib from './screens/warningSoundToVib';
 import MicLoading from './screens/MicLoading';
 import AddMic from './screens/AddMic';
+import SucAddVoice from './screens/SucAddVoice';
+
+
+
 
 const Stack = createStackNavigator();
 
@@ -47,6 +51,17 @@ function NavStack() {
         name="Home"
 
         component={Home}
+
+        options={{ headerShown: false }}
+
+
+
+      />
+      <Stack.Screen
+
+        name="SucAddVoice"
+
+        component={SucAddVoice}
 
         options={{ headerShown: false }}
 

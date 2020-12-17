@@ -3,7 +3,8 @@ import { StyleSheet, Button, View, Text } from 'react-native';
 
 
 
-class addMic extends Component {
+
+class SucAddVoice extends Component {
 
     render() {
 
@@ -12,11 +13,10 @@ class addMic extends Component {
         return (
 
             <View style={{ height: 900, backgroundColor: 'blue' }}>
-                <View>
-                    <Text style={styles.clock}>  </Text>
+               <View>
+                    <Text style={styles.clock}>   </Text>
 
                 </View>
-
                 <View style={{ flex: 1, flexDirection: 'row', }}>
                     <View style={{
                         flexDirection: 'row', width: 70, height: 21, borderRadius: 4, backgroundColor: "#5d9295"
@@ -43,29 +43,32 @@ class addMic extends Component {
                         자주 듣는 음성 등록하기
           </Text>
 
-                    <View style={styles.centerpop}>
-                        <Text>마이크 버튼을 누른 후 아래의 글자를 똑같이 읽어주세요.</Text>
+                    <View style={styles.centerLayer}>
+                        <Text style={{ width: 204, height: 44, fontFamily: "NanumSquare_acR", fontSize: 20, fontWeight: "normal", fontStyle: "normal", lineHeight: 22, letterSpacing: 0, textAlign: "center", color: "#707070" }}>
+                            음성 인식이 완료되었습니다.
+                        </Text>
 
-                        <View style={styles.centerpop2}>
-                            <Text>이번 겨울은 참 추울 것 같네요.</Text>
+                        <Text>
+                            이름을 적어주세요.
+                        </Text>
+                        <View style={styles.lineCenter}>
+
                         </View>
 
-                        <View style={styles.micBT}>
-                            <View style={styles.micBT2}>
-                            </View>
+                        <View style={styles.centerBT}>
+                            <Button
+                                title="저장하기"
+                                
+                            />
                         </View>
 
-                        
-                        <Button
-                            title="(임의버튼)음성 저장 성공"
-                            onPress={() => {
-                                this.props.navigation.navigate('SucAddVoice', {
-
-                                });
-                            }}
-                        />
+                        <View style={styles.centerBT}>
+                            <Button
+                                title="취소하기"
+                                
+                            />
+                        </View>
                     </View>
-
 
 
 
@@ -199,20 +202,59 @@ const styles = StyleSheet.create({
         borderColor: "#707070"
     },
 
-    micBT:{
+    micBT: {
         width: 55,
         height: 55,
         backgroundColor: "#5d9295"
     },
 
-    micBT2:{
+    micBT2: {
         width: 32,
-  height: 38,
-  backgroundColor: "#ffffff"
+        height: 38,
+        backgroundColor: "#ffffff"
 
+    },
+    centerBT: {
+        width: 130,
+        height: 68,
+        borderRadius: 6,
+        backgroundColor: "#5d9295",
+        shadowColor: "rgba(10, 31, 68, 0.12)",
+        shadowOffset: {
+            width: 0,
+            height: 18
+        },
+        shadowRadius: 18,
+        shadowOpacity: 1
+    },
+
+    lineCenter: {
+        width: 140,
+        height: 3,
+        opacity: 0.14,
+        borderRadius: 100,
+        backgroundColor: "#262323"
+    },
+
+    centerLayer: {
+        width: 291,
+        height: 259,
+        borderRadius: 6,
+        backgroundColor: "#ffffff",
+        shadowColor: "rgba(10, 31, 68, 0.12)",
+        shadowOffset: {
+            width: 0,
+            height: 18
+        },
+        shadowRadius: 18,
+        shadowOpacity: 1,
+        borderStyle: "solid",
+        borderWidth: 1,
+        borderColor: "#707070"
     },
 
     clock: {
+
         width: 54,
         height: 20,
         fontFamily: "SFProText",
@@ -225,7 +267,7 @@ const styles = StyleSheet.create({
         color: "#ffffff"
     },
 
-
 });
 
-export default addMic;
+
+export default SucAddVoice;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { StyleSheet, Button, View, Text } from 'react-native';
 
 
@@ -12,6 +11,10 @@ class Home extends Component {
 
 
             <View style={{ height: 900, backgroundColor: 'blue' }}>
+                <View>
+                    <Text style={styles.clock}>  </Text>
+                </View>
+
                 <View style={{ flex: 1, flexDirection: 'row', }}>
                     <View style={styles.top}>
                         <Text style={styles.langBT}>
@@ -41,23 +44,19 @@ class Home extends Component {
                     <View style={styles.centerBT}>
                         <Button
                             title="허용버튼"
-                            onPress={() => {
-                                this.props.navigation.navigate('addVoice', {
-                                    postId: 3006,
-                                    otherParam: 'Pass whatever you want here',
-                                });
-                            }}
+                            
                         />
                     </View>
 
                     <View style={styles.centerBT}>
                         <Button
-                            title="나중에 하기"
-                            onPress={() => {
-                                this.props.navigation.navigate('addVoice', {
-                                  
-                                });
-                            }}
+                            title="나중에 하기 (누르면 앱종료)"
+                            onPress ={
+                                ()=>{
+                                console.log('clicked');
+                                return BackHandler.exitApp();
+                                }
+                            }
                         />
                     </View>
                 </View>
@@ -69,7 +68,7 @@ class Home extends Component {
                             title="경고음 등록하기"
                             onPress={() => {
                                 this.props.navigation.navigate('warningSoundToVib', {
-                                    
+
                                 });
                             }}
                         />
@@ -81,7 +80,7 @@ class Home extends Component {
                             title="음성 등록하기"
                             onPress={() => {
                                 this.props.navigation.navigate('addVoice', {
-                                  
+
                                 });
                             }}
                         />
@@ -93,7 +92,7 @@ class Home extends Component {
                             title="speech to text"
                             onPress={() => {
                                 this.props.navigation.navigate('speechToText', {
-                             
+
                                 });
                             }}
                         />
@@ -103,18 +102,14 @@ class Home extends Component {
 
                         <Button
                             title="전체 창 키우기"
-                            onPress={() => {
-                                this.props.navigation.navigate('addVoice', {
                             
-                                });
-                            }}
                         />
                     </View>
 
 
 
                 </View>
-                
+
                 <View>
                     <Text style={{
                         width: 44,
@@ -210,7 +205,32 @@ const styles = StyleSheet.create({
     setBT: {
         width: 24.8, height: 25.5, backgroundColor: "#ffffff", borderStyle: "solid", borderWidth: 1, borderColor: "rgba(255, 255, 255, 0)",
 
-    }
+    },
+
+    clock: {
+
+        width: 54,
+        height: 20,
+        fontFamily: "SFProText",
+        fontSize: 15,
+        fontWeight: "600",
+        fontStyle: "normal",
+        lineHeight: 20,
+        letterSpacing: -0.3,
+        textAlign: "center",
+        color: "#ffffff"
+    },
+
+    fix:{
+        width: 42,
+        height: 15,
+        backgroundColor: "#ffffff",
+        borderStyle: "solid",
+        borderWidth: 1,
+        borderColor: "#707070",
+        
+    },
+
 
 
 

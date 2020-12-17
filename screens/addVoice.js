@@ -12,6 +12,10 @@ class addVoice extends Component {
     return (
 
       <View style={{ height: 900, backgroundColor: 'blue' }}>
+        <View>
+                    <Text style={styles.clock}>  </Text>
+
+                </View>
         <View style={{ flex: 1, flexDirection: 'row', }}>
           <View style={{
             flexDirection: 'row', width: 70, height: 21, borderRadius: 4, backgroundColor: "#5d9295"
@@ -37,6 +41,30 @@ class addVoice extends Component {
           <Text style={{ width: 186, height: 80, fontFamily: "NanumSquare_acR",fontSize: 20, fontWeight: "normal", fontStyle: "normal", textAlign: "center", letterSpacing: 0,  textAlign: "center", color: "#000000" }}>
             자주 듣는 음성 등록하기
           </Text>
+
+          <View style={{ flex: 1,  flexDirection: 'row',}}>
+          <View style={styles.addPeople}>
+            <Text>엄마</Text>
+            <View style={styles.fix}>
+              <Text>수정하기</Text>
+            </View>
+          </View>
+
+          <View style={styles.addPeople}>
+            <Text>아빠</Text>
+            <View style={styles.fix}>
+              <Text>수정하기</Text>
+            </View>
+          </View>
+
+          <View style={styles.addPeople}>
+            <Text>할아버지</Text>
+            <View style={styles.fix}>
+              <Text>수정하기</Text>
+            </View>
+          </View>
+          </View>
+
 
           <View style={{ width: 31, height: 31, backgroundColor: "#5d9295"}}>
             <Button
@@ -91,11 +119,7 @@ class addVoice extends Component {
 
                         <Button
                             title="전체 창 키우기"
-                            onPress={() => {
-                                this.props.navigation.navigate('addVoice', {
                             
-                                });
-                            }}
                         />
                     </View>
                 </View>
@@ -151,6 +175,30 @@ const styles = StyleSheet.create({
         borderStyle: "solid",
         borderWidth: 1,
         borderColor: "#707070"
+    },
+    
+
+    clock: {
+
+        width: 54,
+        height: 20,
+        fontFamily: "SFProText",
+        fontSize: 15,
+        fontWeight: "600",
+        fontStyle: "normal",
+        lineHeight: 20,
+        letterSpacing: -0.3,
+        textAlign: "center",
+        color: "#ffffff"
+    },
+
+    addPeople:{
+      width: 64,
+      height: 56,
+      backgroundColor: "rgba(151, 187, 214, 0.35)",
+      borderStyle: "solid",
+      borderWidth: 1,
+      borderColor: "#707070",
     },
 
 });
