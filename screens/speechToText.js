@@ -4,16 +4,18 @@ import { Linking, TouchableOpacity, useEffect, WebView, Button, View, Text } fro
 
 
 
-
 class speechToText extends Component {
-
+  
     render() {
+      
 
         return (
 
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 
-                <Text>speech to text</Text>
+                <Text >
+                say apple
+                </Text>
             
        
 
