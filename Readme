@@ -34,3 +34,7 @@ https://teams.microsoft.com/l/file/87A8546C-626B-4068-8034-FAE4FC95A79A?tenantId
 -sound_recorder.py: 사운드 10초 저장 
 
 -quickstart.py: file출력 
+
+[src/.html]
+
+-index.html: 머신러닝 음성인식 분류
